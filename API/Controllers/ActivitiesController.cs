@@ -32,9 +32,7 @@ public class ActivitiesController : BaseApiController
     {
         activity.Id = id;
 
-        await Mediator.Send(new Edit.Command { Activity = activity });
-
-        return Ok();
+        return HandleResult(await Mediator.Send(new Edit.Command { Activity = activity }));
     }
 
     [HttpDelete("{id}")]
