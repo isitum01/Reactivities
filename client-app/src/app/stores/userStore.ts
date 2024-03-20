@@ -32,7 +32,9 @@ export default class UserStore {
       runInAction(() => (this.user = user));
       router.navigate("/activities");
       store.modalStore.closeModal();
-    } catch (error) {}
+    } catch (error) {
+      throw error;      
+    }
   };
 
   logout = () => {

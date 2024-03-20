@@ -30,8 +30,6 @@ export default observer(function HomePage() {
           <>
             <Button
               onClick={() => modalStore.openModal(<LoginForm />)}
-              as={Link}
-              to="/login"
               size="huge"
               inverted
             >
@@ -40,8 +38,6 @@ export default observer(function HomePage() {
 
             <Button
               onClick={() => modalStore.openModal(<RegisterForm />)}
-              as={Link}
-              to="/login"
               size="huge"
               inverted
             >
