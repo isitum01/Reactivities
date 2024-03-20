@@ -8,6 +8,6 @@ export interface User {
 export interface UserFormValues {
     email: string;
     password: string;
-    displayName:  string;
+    displayName?:  string;
     username?: string;
 }
